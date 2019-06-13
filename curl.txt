@@ -1,0 +1,20 @@
+#1  访问百度首页的html源码,默认将访问到的页面打印到标准输出
+curl http://www.baidu.com 
+
+#2 利用curl下载一张图片,[且命名为1.jpg]
+curl -o 1.jpg http://ocs628urt.bkt.clouddn.com/table_1.1.png
+curl -O http://ocs628urt.bkt.clouddn.com/table_1.1.png
+curl -O url1 -O url2    (同时下载多个文件)
+
+# 通过使用-C选项可对大文件使用断点续传功能（当文件下载到一半时突然结束进程）
+curl -C - -O http://ocs628urt.bkt.clouddn.com/table_1.1.png 
+
+#  访问一个url但是只显示response信息
+curl -I url
+
+#  打印出和服务器通信的过程
+curl -v url
+
+#  保存与使用网站的cookie信息
+
+#  传递请求数据
