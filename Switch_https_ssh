@@ -1,3 +1,17 @@
+#  创建本地仓库且与远程仓库相关联  ========================================
+方法一：
+# 1，选一个合适的目录，在该目录下执行下一条语句创建本地仓库：
+	git init
+# 2，再在github上建立一个远程仓库：略
+# 3，在该目录下执行下面语句，让本地仓库与远程仓库相关联：
+	git remote add origin https://github.com/hzqkinger/test_git.git
+
+方法二：
+# 1，在github上建立一个远程仓库：略
+# 2，最后在合适的地方执行下面语句，创建本地仓库并且与远程仓库相关联
+	git clone https://github.com/hzqkinger/test_git.git
+
+# =========================================================================
 github有两种更新的渠道，一种是https的，一种是ssh的，其中https每次都要输入密码
 
 # 下面使用的是https渠道来更新远端仓库 ==========================================
@@ -13,3 +27,14 @@ origin	git@github.com:/hzqkinger/ipc_sig.git (fetch)
 origin	git@github.com:/hzqkinger/ipc_sig.git (push)
 # 从ssh渠道更改到https渠道 ==============================================
 [hz@MiWiFi-R4-srv ipc_sig]$ git remote set-url origin https://github.com/hzqkinger/ipc_sig.git]
+
+# 怎么修改Git remote add时使用的远程仓库？
+方法一：
+	git remote rm origin 
+	git remote add origin git@github.com:Liutos/foobar.git
+方法二：
+	git remote origin set-url <URL>  把<URL>替换成新的url地址。
+方法三：
+	直接修改.git/config文件
+
+
