@@ -1,3 +1,5 @@
+# .git/info/exclude文件跟.gitignore文件的作用是一样的
+
 # https://www.cnblogs.com/youyoui/p/8337147.html
 
 ########## 忽略某些文件 #####
