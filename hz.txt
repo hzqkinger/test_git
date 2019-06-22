@@ -20,3 +20,9 @@ git status   可以查看当前工作目录所有文件的状态
 		git checkout <file>		放弃对某个文件的更新
 	3，未跟踪文件：
 		git add <file>			把该文件放到暂存区
+
+###################################
+.git/HEAD  相当于一个指针，它会指向一个分支
+.git/refs/heads 这个目录下可以查看当前本地仓库有多少分支
+.git/refs/remote/origin 这个目录下可以查看当前远程仓库有多少分支
+.git/refs/tags  这个目录下可以查看给那些版本打了标签
